@@ -194,6 +194,10 @@ img {
     background: var(--border-color);
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .lang-select {
     font-size: 0.9rem;
     font-weight: 500;
@@ -515,3 +519,42 @@ img {
     }
 }
 
+@media (max-width: 767px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0.75rem;
+    }
+
+    .header-right {
+        gap: 0.5rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        font-size: 1.1rem;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+        padding: 0.75rem 1.5rem 1rem;
+        background: var(--bg-primary);
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: var(--shadow-soft);
+    }
+
+    .nav-menu.is-open {
+        display: flex;
+    }
+
+    .nav-menu a {
+        padding: 0.5rem 0;
+    }
+}

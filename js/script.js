@@ -44,6 +44,42 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // PENYESUAIAN TAMPILAN MENU
+    const menuToggleBtn = document.getElementById('menu-toggle');
+    const navMenu = document.getElementById('primary-navigation');
+
+    if (menuToggleBtn && navMenu) {
+        const setMenuOpen = (isOpen) => {
+            navMenu.classList.toggle('is-open', isOpen);
+            menuToggleBtn.setAttribute('aria-expanded', String(isOpen));
+            menuToggleBtn.setAttribute(
+                'aria-label',
+                isOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi'
+            );
+            menuToggleBtn.title = isOpen ? 'Tutup menu navigasi' : 'Buka menu navigasi';
+            menuToggleBtn.querySelector('span').textContent = isOpen ? '×' : '☰';
+        };
+
+        menuToggleBtn.addEventListener('click', () => {
+            setMenuOpen(menuToggleBtn.getAttribute('aria-expanded') !== 'true');
+        });
+
+        navMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => setMenuOpen(false));
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && menuToggleBtn.getAttribute('aria-expanded') === 'true') {
+                setMenuOpen(false);
+                menuToggleBtn.focus();
+            }
+        });
+
+        window.matchMedia('(min-width: 768px)').addEventListener('change', (event) => {
+            if (event.matches) setMenuOpen(false);
+        });
+    }
+
 
     // ANIMASI MUNCUL SAAT SCROLL (SCROLL REVEAL)
     const observerOptions = {
