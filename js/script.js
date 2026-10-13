@@ -4,7 +4,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* 0. ANIMASI LOADING SCREEN HILANG SETELAH HALAMAN DIMUAT */
+    // ANIMASI LOADING SCREEN HILANG SETELAH HALAMAN DIMUAT */
     const loadingScreen = document.getElementById('loading-screen');
     if (loadingScreen) {
         window.addEventListener('load', () => {
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* 1. FITUR TOGGLE MODE (DARK / LIGHT MODE) */
+    // FITUR TOGGLE MODE (DARK / LIGHT MODE)
     const themeToggleBtn = document.getElementById('theme-toggle');
     
     // Cek preferensi tersimpan di localStorage sebelumnya
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
-    /* 2. ANIMASI MUNCUL SAAT SCROLL (SCROLL REVEAL) */
+    // ANIMASI MUNCUL SAAT SCROLL (SCROLL REVEAL)
     const observerOptions = {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px"
@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    /* 3. SMOOTH SCROLLING UNTUK NAVIGASI TAUTAN */
+    // SMOOTH SCROLLING UNTUK NAVIGASI TAUTAN 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
