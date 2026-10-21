@@ -80,6 +80,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // DETAIL KARTU PROYEK
+    document.querySelectorAll('.gallery-toggle').forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            const isExpanded = toggle.getAttribute('aria-expanded') !== 'true';
+            const galleryItem = toggle.closest('.gallery-item');
+            const description = document.getElementById(toggle.getAttribute('aria-controls'));
+            const projectTitle = toggle.dataset.projectTitle
+                || toggle.getAttribute('aria-label').replace(/^(Tampilkan|Sembunyikan) detail /, '');
+            toggle.dataset.projectTitle = projectTitle;
+
+            toggle.setAttribute('aria-expanded', String(isExpanded));
+            toggle.setAttribute(
+                'aria-label',
+                `${isExpanded ? 'Sembunyikan' : 'Tampilkan'} detail ${projectTitle}`
+            );
+            galleryItem.classList.toggle('is-expanded', isExpanded);
+            description.setAttribute('aria-hidden', String(!isExpanded));
+        });
+    });
 
     // ANIMASI MUNCUL SAAT SCROLL (SCROLL REVEAL)
     const observerOptions = {
@@ -100,8 +119,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const animatedElements = document.querySelectorAll('.card, .gallery-item, .hero-text, .hero-img-wrapper');
     animatedElements.forEach(el => {
         el.style.opacity = "0";
-        el.style.transform = "translateY(25px)";
-        el.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+        if (el.matches('.gallery-item')) {
+            el.style.transition = "opacity 0.6s ease-out";
+        } else {
+            el.style.transform = "translateY(25px)";
+            el.style.transition = "opacity 0.6s ease-out, transform 0.6s ease-out";
+        }
         observer.observe(el);
     });
 
