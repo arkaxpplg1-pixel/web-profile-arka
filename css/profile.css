@@ -1,0 +1,282 @@
+.profile-intro {
+    padding: 3rem 0 4rem;
+}
+
+.profile-intro-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.profile-socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.profile-socials a {
+    display: flex;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+
+.profile-socials a:hover {
+    transform: translateY(-2px);
+    background: var(--accent-indigo);
+    color: white;
+}
+
+.profile-socials a:focus-visible {
+    outline: 3px solid var(--accent-indigo);
+    outline-offset: 3px;
+}
+
+.profile-photo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+}
+
+.profile-photo-wrap img {
+    width: min(100%, 560px);
+    max-height: 68vh;
+    object-fit: contain;
+    object-position: center bottom;
+    filter: drop-shadow(0 18px 28px rgba(15, 23, 42, 0.14));
+}
+
+.profile-copy {
+    max-width: 620px;
+}
+
+.profile-copy h1 {
+    margin-bottom: 0.5rem;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
+}
+
+.profile-copy .profile-greeting,
+.profile-copy .profile-name {
+    display: block;
+}
+
+.profile-copy .profile-greeting {
+    margin-bottom: 0.3em;
+    color: var(--text-main);
+    font-size: 0.58em;
+    letter-spacing: 0.02em;
+}
+
+.profile-copy .profile-name {
+    color: var(--accent-indigo);
+    letter-spacing: 0.02em;
+}
+
+.profile-copy .sub-role {
+    margin-bottom: 1.25rem;
+}
+
+.profile-copy > p:not(.sub-role) {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.profile-achievements-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+}
+
+.achievements {
+    padding: 4rem 0;
+    background: var(--bg-surface);
+}
+
+.achievements-eyebrow {
+    color: var(--accent-indigo);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.achievements .section-title {
+    margin-bottom: 0.75rem;
+}
+
+.achievements-intro {
+    max-width: 650px;
+    margin: 0 auto 3rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.achievement-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: -1rem 0 2.5rem;
+    padding: 0.35rem;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--bg-card);
+}
+
+.achievement-filter {
+    min-width: 76px;
+    padding: 0.65rem 1.15rem;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.achievement-filter:hover {
+    color: var(--accent-indigo);
+}
+
+.achievement-filter.is-active {
+    background: var(--accent-indigo);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+.achievement-filter:focus-visible {
+    outline: 3px solid var(--accent-indigo);
+    outline-offset: 3px;
+}
+
+.achievement-level[hidden] {
+    display: none;
+}
+
+.achievement-level + .achievement-level {
+    margin-top: 3rem;
+}
+
+.achievement-level-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    font-size: 1.35rem;
+}
+
+.achievement-level-title span {
+    color: var(--accent-indigo);
+    font-size: 0.9rem;
+}
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.achievement-card {
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background: var(--bg-card);
+    box-shadow: var(--shadow-soft);
+}
+
+.achievement-photo-placeholder {
+    display: flex;
+    min-height: 220px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.2), transparent 35%),
+        linear-gradient(135deg, var(--bg-surface), var(--bg-card));
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.achievement-photo-placeholder span:first-child {
+    font-size: 2.5rem;
+}
+
+.achievement-card-copy {
+    padding: 1.5rem;
+}
+
+.achievement-label {
+    margin-bottom: 0.35rem;
+    color: var(--accent-indigo);
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.achievement-card-copy h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.achievement-card-copy > p:last-child {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+    .profile-intro {
+        padding: 4rem 0 5rem;
+    }
+
+    .profile-intro-container {
+        grid-template-columns: 48px minmax(0, 0.95fr) minmax(0, 1.05fr);
+        gap: 1.5rem;
+    }
+
+    .profile-socials {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .profile-photo-wrap {
+        min-height: 400px;
+    }
+
+    .profile-photo-wrap img {
+        width: 100%;
+        object-position: center;
+    }
+
+    .achievement-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .profile-intro-container {
+        gap: 4rem;
+    }
+
+    .profile-photo-wrap {
+        min-height: 520px;
+    }
+}

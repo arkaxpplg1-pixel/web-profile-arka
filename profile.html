@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kenali lebih dekat Arka Nada Bramantio dan perjalanan prestasinya.">
+    <title>Profile | Arka Nada Bramantio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h2>LOADING...</h2>
+            <p>Memuat Profil Arka Nada</p>
+        </div>
+    </div>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="header-left">
+                <span class="brand-badge">Kanzz</span>
+                <span class="brand-name">Ryu_Kanzeo</span>
+            </div>
+            <nav id="primary-navigation" class="nav-menu" aria-label="Navigasi utama">
+                <a href="index.html">Home</a>
+                <a href="profile.html" class="active" aria-current="page">Profile</a>
+                <a href="index.html#keahlian">Keahlian</a>
+                <a href="index.html#portofolio">Project</a>
+                <a href="index.html#portofolio">Gallery</a>
+            </nav>
+            <div class="header-right">
+                <button id="menu-toggle" class="icon-btn menu-toggle" type="button"
+                    aria-expanded="false" aria-controls="primary-navigation"
+                    aria-label="Buka menu navigasi" title="Buka menu navigasi">
+                    <span aria-hidden="true">☰</span>
+                </button>
+                <button id="theme-toggle" class="icon-btn" type="button" title="Ganti Mode Gelap/Terang" aria-label="Ganti mode gelap atau terang">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="profile-intro">
+            <div class="container profile-intro-container">
+                <nav class="profile-socials" aria-label="Media sosial Arka Nada">
+                    <a href="https://www.tiktok.com/@ryuu_kanzzz?_r=1&_t=ZS-99xQWWKFfRV" target="_blank" rel="noopener noreferrer" aria-label="TikTok Arka Nada" title="TikTok">ᕷ</a>
+                    <a href="https://www.instagram.com/ryu_kanzeo?stkn=bmRhbXRndmNubngy" target="_blank" rel="noopener noreferrer" aria-label="Instagram Arka Nada" title="Instagram">🅾</a>
+                    <a href="https://www.linkedin.com/in/arka-nada-bramantio-6a160a384/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Arka Nada" title="LinkedIn">in</a>
+                </nav>
+                <div class="profile-photo-wrap">
+                    <img src="img/foto-profile.jpg" alt="Foto Arka Nada Bramantio">
+                </div>
+                <div class="profile-copy">
+                    <h1>
+                        <span class="profile-greeting">Halo, saya</span>
+                        <span class="profile-name">Arka Nada Bramantio</span>
+                    </h1>
+                    <p class="sub-role">Siswa RPL | SMKS Brantas Karangkates</p>
+                    <p>
+                        Saya adalah siswa Rekayasa Perangkat Lunak yang memiliki rasa ingin tahu tinggi terhadap dunia teknologi. Saya senang belajar bagaimana sebuah ide bisa diwujudkan menjadi sesuatu yang bermanfaat.
+                    </p>
+                    <p>
+                        Bagi saya, coding bukan sekadar mengetik baris perintah, tetapi juga cara untuk berpikir kritis, berlatih disiplin, dan menyelesaikan masalah. Saya terus mengembangkan kemampuan dan pengalaman untuk meraih cita-cita di bidang teknologi.
+                    </p>
+                    <a class="btn-primary profile-achievements-link" href="#prestasi">Lihat Prestasi &darr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="prestasi" class="achievements">
+            <div class="container">
+                <p class="achievements-eyebrow">Perjalanan dan pencapaian</p>
+                <h2 class="section-title">Prestasi <span>Saya</span></h2>
+                <p class="achievements-intro">Prestasi dikelompokkan berdasarkan jenjang sekolah. Kartu berikut adalah tempat untuk menambahkan foto dan cerita prestasi yang sebenarnya.</p>
+
+                <nav class="achievement-filters" aria-label="Filter prestasi">
+                    <button class="achievement-filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+                    <button class="achievement-filter" type="button" data-filter="smp" aria-pressed="false">SMP</button>
+                    <button class="achievement-filter" type="button" data-filter="smk" aria-pressed="false">SMK</button>
+                </nav>
+
+                <section class="achievement-level" data-achievement-level="smp" aria-labelledby="prestasi-smp">
+                    <h3 id="prestasi-smp" class="achievement-level-title"><span>01</span> Prestasi SMP</h3>
+                    <div class="achievement-grid">
+                        <article class="achievement-card">
+                            <div class="achievement-photo-placeholder" aria-label="Tempat foto prestasi SMP">
+                                <span aria-hidden="true">🏆</span>
+                                <span>Foto prestasi SMP</span>
+                            </div>
+                            <div class="achievement-card-copy">
+                                <p class="achievement-label">Jenjang SMP</p>
+                                <h4>Prestasi akan ditambahkan</h4>
+                                <p>Tambahkan nama penghargaan, tahun, dan cerita singkat tentang prestasi SMP di sini.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="achievement-level" data-achievement-level="smk" aria-labelledby="prestasi-smk">
+                    <h3 id="prestasi-smk" class="achievement-level-title"><span>02</span> Prestasi SMK</h3>
+                    <div class="achievement-grid">
+                        <article class="achievement-card">
+                            <div class="achievement-photo-placeholder" aria-label="Tempat foto prestasi SMK">
+                                <span aria-hidden="true">🏆</span>
+                                <span>Foto prestasi SMK</span>
+                            </div>
+                            <div class="achievement-card-copy">
+                                <p class="achievement-label">Jenjang SMK</p>
+                                <h4>Prestasi akan ditambahkan</h4>
+                                <p>Tambahkan nama penghargaan, tahun, dan cerita singkat tentang prestasi SMK di sini.</p>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2026 Arka Nada Bramantio | SMKS Brantas Karangkates. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>
